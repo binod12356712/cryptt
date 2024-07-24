@@ -1,0 +1,111 @@
+/* .container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #4caf50;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.menu-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: -250px;
+  transition: left 0.3s;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-header img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.functions {
+  margin-top: 20px;
+}
+
+.functions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.functions ul li {
+  margin-bottom: 10px;
+}
+
+.functions ul li a,
+.functions ul li button {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.functions ul li a:hover,
+.functions ul li button:hover {
+  background-color: #555;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+.banner {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.settings-content {
+  text-align: center;
+}
+
+.logout-button {
+  color: red;
+} */

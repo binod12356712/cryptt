@@ -1,0 +1,60 @@
+.transaction-details {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.report-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-top-left {
+  width: 50px;
+  height: 50px;
+}
+
+.symbol-timestamp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.symbol {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.timestamp {
+  font-size: 14px;
+  color: #666;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.value {
+  font-weight: normal;
+}
+
+.completed {
+  color: green;
+}
+
+.pending {
+  color: orange;
+}

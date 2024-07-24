@@ -1,0 +1,55 @@
+.admin-dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%;
+  padding-top: 60px; /* Adjust based on your navbar height */
+}
+
+.content {
+  margin-left: 15%; /* Adjust based on sidebar width */
+  padding: 20px;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.bg-info {
+  background-color: #17a2b8 !important;
+}
+
+.bg-success {
+  background-color: #28a745 !important;
+}
+
+.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+.bg-warning {
+  background-color: #ffc107 !important;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.text-dark {
+  color: #343a40 !important;
+}
+
+.chartjs-render-monitor {
+  max-width: 100%;
+  height: auto !important;
+}
