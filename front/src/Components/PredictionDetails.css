@@ -1,0 +1,92 @@
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.prediction-details {
+  border: 2px solid #000;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.report-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.report-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.logo-top-left {
+  width: 50px;
+  height: 50px;
+  /* border-radius: 50%; */
+  padding: 0px;
+}
+
+.symbol-timestamp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.symbol {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.timestamp {
+  font-size: 16px;
+}
+
+.prediction-details .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.prediction-details p {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.prediction-details .label {
+  /* font-weight: bold; */
+  color: #333;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.prediction-details .value {
+  color: #333;
+}
+
+.prediction-details .value.up {
+  color: #4caf50;
+}
+
+.prediction-details .value.down {
+  color: #f44336;
+}
+
+.prediction-details .profit {
+  color: #4caf50;
+}
+
+.prediction-details .loss {
+  color: #f44336;
+}

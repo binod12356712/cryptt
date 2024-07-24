@@ -1,0 +1,1134 @@
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --primary-color: #4caf50;
+  --secondary-color: #50eb68;
+  --highlight-color: #fefefe;
+  --modal-background: #fefefe;
+}
+
+[data-theme="dark"] {
+  --background-color: #1c1c1c;
+  --text-color: #f0f0f0;
+  --primary-color: #000;
+  --secondary-color: #171b17;
+  --highlight-color: #444;
+  --modal-background: #333;
+}
+.text1 {
+  color: var(--text-color);
+}
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.wallet-header {
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+.wallet-tabs .active {
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+h1 {
+  color: white;
+}
+.button-group {
+  margin-top: 30px;
+}
+.button-group .tab-button {
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+}
+
+.button-group .tab-button.active {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.banner {
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--text-color);
+}
+
+.market-item {
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+}
+
+.market-item:hover {
+  background-color: var(--highlight-color);
+}
+
+.copied-message {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.wallet {
+  width: 100%;
+  max-width: 400px;
+  background: var(--highlight-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 10px auto;
+}
+
+.wallet-header {
+  background: var(--primary-color);
+  padding: 20px;
+  color: var(--text-color);
+}
+
+.wallet-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.wallet-balance {
+  padding: 10px;
+  color: var(--text-color);
+}
+
+.wallet-balance p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+b,
+strong {
+  font-weight: bolder;
+  color: white;
+}
+.wallet-tabs {
+  display: flex;
+  justify-content: space-around;
+  background: var(--highlight-color);
+}
+
+.wallet-tabs button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.wallet-tabs .active {
+  background: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 5px;
+}
+
+.wallet-content {
+  padding: 20px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.wallet-qr img {
+  width: 150px;
+}
+
+.wallet-qr p {
+  font-size: 12px;
+  color: var(--text-color);
+}
+
+.copy-address {
+  color: var(--secondary-color);
+  text-decoration: blink;
+  cursor: pointer;
+}
+
+.recharge-link {
+  color: var(--secondary-color);
+  text-decoration: blink;
+  cursor: pointer;
+}
+
+.currency-tag {
+  background: #ff9800;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.input-field {
+  width: calc(100% - 40px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.input-field.small-input {
+  width: calc(50% - 40px);
+}
+
+.send-button,
+.convert-button {
+  background: linear-gradient(to right, var(--secondary-color), #feb47b);
+  color: var(--text-color);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: calc(100% - 40px);
+  margin: 10px 20px;
+}
+
+.max-button {
+  color: var(--secondary-color);
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal.show {
+  display: flex; /* Display the modal */
+  justify-content: center; /* Center the modal content */
+  align-items: center; /* Center the modal content */
+}
+
+.modal-content {
+  background-color: var(--modal-background);
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+.form-group {
+  margin: 20px 0;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.upload-screenshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.upload-icon {
+  font-size: 36px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.upload-screenshot img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.submit-button {
+  background: linear-gradient(to right, var(--secondary-color), #feb47b);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  background: var(--background-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow-y: auto;
+  height: 100vh; /* Ensure the container takes the full height of the viewport */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Add padding to make it look better */
+  background: var(--primary-color);
+  color: var(--text-color);
+  position: sticky; /* Make the header stick to the top */
+  top: 0;
+  z-index: 10;
+  width: 100%; /* Make sure the header takes full width of the container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+header .title-container {
+  display: flex;
+  align-items: center;
+  background: var(--primary-color);
+}
+.modal.show {
+  display: flex; /* Display the modal */
+  justify-content: center; /* Center the modal content horizontally */
+  align-items: center; /* Center the modal content vertically */
+}
+
+.modal-content {
+  background-color: var(--modal-background);
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon-notification {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.menu-button {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: auto; /* Push the menu button to the far right */
+}
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: var(--highlight-color);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.sidebar-header p {
+  margin: 0;
+  font-size: 14px;
+  color: white;
+}
+
+.credit {
+  display: inline-block;
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.smart-contract-button {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  background: linear-gradient(to right, var(--secondary-color), #feb47b);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.functions {
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+.functions h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.functions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.functions li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.functions li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.functions li:hover a {
+  color: var(--secondary-color);
+}
+
+.functions li i {
+  margin-right: 10px;
+}
+
+.more-options-button {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.more-options.hidden {
+  display: none;
+}
+
+.more-options ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.more-options li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.more-options li a {
+  text-decoration: none;
+  color: black;
+}
+
+.more-options li:hover a {
+  color: var(--secondary-color);
+}
+
+.more-options li i {
+  margin-right: 10px;
+}
+
+.main-content {
+  padding: 20px;
+  margin-top: 20px; /* Add margin to prevent content from being hidden behind the sticky header */
+}
+
+.banner {
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--text-color);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.banner h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.banner p {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: white;
+}
+
+.market-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.market-tabs button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background-color: var(--highlight-color);
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-color);
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.market-tabs button:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.market-tabs .active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.market-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.market-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: var(--highlight-color);
+  border-radius: 10px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+}
+
+.market-item:hover {
+  background-color: var(--highlight-color);
+}
+
+.market-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.market-stats {
+  text-align: right;
+  font-size: 14px;
+}
+
+.negative {
+  color: red;
+}
+
+.positive {
+  color: green;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal.show {
+  display: flex; /* Display the modal */
+  justify-content: center; /* Center the modal content */
+  align-items: center; /* Center the modal content */
+}
+
+.modal-content {
+  background-color: var(--modal-background);
+  margin: 5% auto; /* Adjusted for better alignment */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-group {
+  margin: 20px 0;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.upload-screenshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.upload-icon {
+  font-size: 36px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.upload-screenshot img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.submit-button {
+  background: linear-gradient(to right, var(--secondary-color), #feb47b);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  background: var(--background-color);
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow-y: auto;
+  height: 100vh; /* Ensure the container takes the full height of the viewport */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Add padding to make it look better */
+  background: var(--primary-color);
+  color: var(--text-color);
+  position: sticky; /* Make the header stick to the top */
+  top: 0;
+  z-index: 10;
+  width: 100%; /* Make sure the header takes full width of the container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+header .title-container {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon-notification {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.menu-button {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: auto; /* Push the menu button to the far right */
+}
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: var(--highlight-color);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.sidebar-header p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.credit {
+  display: inline-block;
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.smart-contract-button {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  background: linear-gradient(to right, var(--secondary-color), #feb47b);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.functions {
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+.functions h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.functions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.functions li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.functions li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.functions li:hover a {
+  color: var(--secondary-color);
+}
+
+.functions li i {
+  margin-right: 10px;
+}
+
+.more-options-button {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  background: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.more-options.hidden {
+  display: none;
+}
+
+.more-options ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.more-options li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.more-options li a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.more-options li:hover a {
+  color: var(--secondary-color);
+}
+
+.more-options li i {
+  margin-right: 10px;
+}
+
+.main-content {
+  padding: 20px;
+  margin-top: 20px; /* Add margin to prevent content from being hidden behind the sticky header */
+}
+
+.banner {
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--text-color);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.banner h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+.banner p {
+  margin: 10px 0 0;
+  font-size: 16px;
+}
+
+.market-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.market-tabs button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background-color: var(--highlight-color);
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-color);
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.market-tabs button:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.market-tabs .active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.market-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.market-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: var(--highlight-color);
+  border-radius: 10px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+}
+
+.market-item:hover {
+  background-color: var(--highlight-color);
+}
+
+.market-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.market-stats {
+  text-align: right;
+  font-size: 14px;
+}
+
+.negative {
+  color: red;
+}
+
+.positive {
+  color: green;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal.show {
+  display: flex; /* Display the modal */
+  justify-content: center; /* Center the modal content */
+  align-items: center; /* Center the modal content */
+}
+
+.modal-content {
+  background-color: var(--modal-background);
+  margin: 5% auto; /* Adjusted for better alignment */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-group {
+  margin: 20px 0;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.upload-screenshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.upload-icon {
+  font-size: 36px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.upload-screenshot img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.submit-button {
+  background: linear-gradient(to right, var(--secondary-color), #feb47b);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 20px;
+}

@@ -1,0 +1,91 @@
+.prediction-summary {
+  background-color: #ffffffbe;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.prediction-summary:hover {
+  background-color: #ffffffbe;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profit-loss {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.profit {
+  color: #4caf50;
+}
+
+.loss {
+  color: #f44336;
+}
+
+.details {
+  margin-top: 10px;
+}
+
+.result-container {
+  padding-top: 100px;
+  color: black;
+  background-color: #f0f0f0be;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+  background-color: #555;
+}
+
+.tab-button.active {
+  background-color: black;
+  color: white;
+}
+
+.prediction-list {
+  list-style: none;
+  padding: 0;
+}
+
+.no-predictions {
+  text-align: center;
+  color: #888;
+}
